@@ -47,8 +47,20 @@ const team = [
 },
 ];
 
+let teamCardWrapper = document.getElementById('card-wrapper')
+
 // stampo su console tutti i nomi, ruoli e img profilo
 for ( key in team){
+    let newName = document.createElement('div');
+    newName.classList.add('name');
+    let newRole = document.createElement('div');
+    newRole.classList.add('role');
+    let imgWrapper = document.createElement('div');
+    imgWrapper.classList.add('img-container');
+    teamCardWrapper.appendChild(newName).innerHTML = team[key].name;
+    teamCardWrapper.appendChild(newRole).innerHTML = team[key].role;
+    teamCardWrapper.appendChild(imgWrapper).innerHTML = team[key].image;
+
     console.log(team[key].name)
     console.log(team[key].role)
     console.log(team[key].image)
