@@ -1,8 +1,19 @@
 .partner{
-    display: flex;
+    width: calc(100% / 6);
+    border: 1px solid black;
+    text-align: center;
+    font-weight: bold;
+    padding: 0.5rem;
+    margin: 1rem;
 }
 
-.card-wrapper{
+
+#card-wrapper{
     display: flex;
-    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 1rem;
+}
+
+#img{
+    height: 350px;
 }

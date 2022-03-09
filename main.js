@@ -52,7 +52,12 @@ let teamCardWrapper = document.getElementById('card-wrapper')
 for ( key in team){
     let newPartner = document.createElement('div');
     newPartner.classList.add('partner');
-    teamCardWrapper.appendChild(newPartner).innerHTML += team[key].image + ` <br>`;
+    
+    let img = document.getElementById('img');
+    img.classList.add('img-fluid');
+    img.src = `img/${[key].image}`;
+    teamCardWrapper.appendChild(img) + ` <br>`;
+
     teamCardWrapper.appendChild(newPartner).innerHTML += team[key].name + ` <br>`;
     teamCardWrapper.appendChild(newPartner).innerHTML += team[key].role + ` <br>`;
 
@@ -63,3 +68,4 @@ for ( key in team){
     console.log(team[key].role)
     console.log(team[key].image)
 }
+
