@@ -49,14 +49,13 @@ const team = [
 
 let teamCardWrapper = document.getElementById('card-wrapper')
 // stampo nel dom tutti i nomi i ruoli e i link img
-for ( key in team){
+for ( let i = 0; i < team.length; i++){
     let newPartner = document.createElement('div');
     newPartner.classList.add('partner');
+    newPartner.innerHTML += `
+    <img src="img/${team[key].image}" id="img">
+    `
     
-    let img = document.getElementById('img');
-    img.classList.add('img-fluid');
-    img.src = `img/${[key].image}`;
-    teamCardWrapper.appendChild(img) + ` <br>`;
 
     teamCardWrapper.appendChild(newPartner).innerHTML += team[key].name + ` <br>`;
     teamCardWrapper.appendChild(newPartner).innerHTML += team[key].role + ` <br>`;
